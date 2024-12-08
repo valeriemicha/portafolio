@@ -1,0 +1,556 @@
+/* PANTALLAS MENORES A 1024px */
+@media screen and (max-width: 1024px) {
+    header {
+
+        &>nav {
+            justify-content: center;
+        }
+    }
+
+    section.seccion-sobre-mi {
+        & div.info-sobre-mi {
+            &>img {
+                width: 400px;
+            }
+
+            & div.imagenes-representativas {
+                & img:nth-child(1) {
+                    width: 500px;
+                }
+
+                & img:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+
+
+        & div.contenido-informacion {
+            & div.contenido-programas {
+                & div.programa {
+                    & img.logo-programa {
+                        width: 90px;
+                    }
+
+                    & img.estrellas {
+                        width: 70px;
+                    }
+                }
+            }
+        }
+    }
+
+    section.seccion-proyectos {
+        & div.tipos-proyectos {
+            width: 100%;
+            margin: 2.5rem 0;
+            display: flex;
+            justify-content: center;
+
+
+            & ul {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        & section.seccion-ilustraciones {
+            & div.contenido-ilustraciones {
+                & div:nth-child(1) {
+                    & img {
+                        max-width: 600px;
+                    }
+
+                }
+
+                & div:nth-child(2) {
+                    & img {
+                        max-width: 600px;
+                    }
+
+                }
+            }
+
+
+        }
+
+        & section.seccion-disenos {
+            & div.contenido-disenos {
+                & img:nth-child(even) {
+                    width: 345px;
+                }
+            }
+        }
+
+        & section.seccion-fotografias {
+            & div.contenido-fotografias {
+                flex-direction: column;
+
+                &>img {
+                    width: 500px;
+                    height: 550px;
+                }
+
+                & div.fotos-dobles {
+                    flex-direction: row;
+                }
+            }
+        }
+
+
+        & section.seccion-branding {
+            & div.contenido-branding {
+                grid-template-areas:
+                    "titulo titulo  titulo"
+                    "mugs   llavero muneco"
+                    "camisa estampa gorra";
+
+                & img.branding {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    section.seccion-contacto {
+        & div.contenido-contacto {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            place-items: center;
+            margin: 2rem 50px;
+        }
+    }
+}
+
+/* PANTALLAS MENORES A 768px */
+@media screen and (max-width: 768px) {
+    section.seccion-sobre-mi {
+        & div.info-sobre-mi {
+            &>img {
+                width: 300px;
+            }
+
+            & div.imagenes-representativas {
+                & img:nth-child(1) {
+                    width: 500px;
+                }
+            }
+        }
+
+
+        & div.contenido-informacion {
+            & div.contenido-programas {
+                & div.programa {
+
+                    & img.logo-programa {
+                        width: 60px;
+                    }
+
+                    & img.estrellas {
+                        width: 40px;
+                    }
+                }
+            }
+
+            & div.texto-sobre-mi {
+                &>p {
+                    font-size: 1rem;
+                }
+
+                & div.contenido-habilidades-educacion {
+                    gap: 5rem;
+
+                    & div.habilidades,
+                    div.educacion {
+                        & ul li {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    section.seccion-proyectos {
+        & div.tipos-proyectos {
+            width: 100%;
+            margin: 2.5rem 0;
+
+            & ul {
+                display: flex;
+                justify-content: center;
+
+                li {
+                    width: 300px;
+                }
+            }
+        }
+
+        & section.seccion-ilustraciones {
+            & div.contenido-ilustraciones {
+                & div:nth-child(1) {
+                    & img {
+                        max-width: 600px;
+                    }
+                }
+
+                & div:nth-child(2) {
+                    & img {
+                        max-width: 600px;
+                    }
+
+                }
+            }
+        }
+
+        & section.seccion-disenos {
+            margin: 2rem 0;
+
+            & div.contenido-disenos {
+                & img:nth-child(odd) {
+                    height: 435px;
+                }
+
+                & img:nth-child(even) {
+                    width: 300px;
+                }
+            }
+        }
+
+        & section.seccion-fotografias {
+            &>img {
+                width: 70%;
+            }
+
+            & div.contenido-fotografias {
+                margin-top: 2rem;
+
+                &>img {
+                    width: 500px;
+                    height: 661px;
+                }
+
+                & div.fotos-dobles {
+                    flex-direction: row;
+
+                    & img {
+                        width: 243px;
+                    }
+                }
+            }
+        }
+
+
+        & section.seccion-branding {
+            & div.contenido-branding {
+                grid-template-areas:
+                    "titulo titulo  titulo"
+                    "mugs   llavero muneco"
+                    "camisa estampa gorra";
+
+                & img.branding {
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+    section.seccion-contacto {
+        & div.cabecera-contacto {
+            &>img {
+                width: 12%;
+            }
+        }
+    }
+}
+
+/* PANTALLAS MENORES A 700px */
+@media screen and (max-width: 700px) {}
+
+/* PANTALLAS MENORES A 680px */
+@media screen and (max-width: 680px) {
+    section.seccion-sobre-mi {
+        & div.contenido-informacion {
+            & div.texto-sobre-mi {
+                & div.contenido-habilidades-educacion {
+                    gap: 1.5rem;
+                    flex-wrap: wrap;
+                }
+            }
+
+        }
+    }
+}
+
+/* PANTALLAS MENORES A 480px */
+@media screen and (max-width: 480px) {
+    header {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--vinotinto-claro);
+
+        & a img {
+            display: block;
+        }
+
+        & div.boton-burguer {
+            padding: 10px;
+            display: block;
+
+            & span {
+                transition: all 0.3s ease;
+                content: "";
+                width: 30px;
+                height: 4px;
+                background-color: var(--vinotinto-focus);
+                display: block;
+                margin: 5px auto;
+                border-radius: 10px;
+            }
+
+            &.active {
+                & span:nth-child(1) {
+                    transform: rotate(45deg) translate(5px, 7.5px);
+                }
+
+                & span:nth-child(2) {
+                    opacity: 0;
+                }
+
+                & span:nth-child(3) {
+                    transform: rotate(-45deg) translate(5px, -8px);
+                }
+            }
+        }
+
+        &>nav {
+            
+            transition: all 0.3s ease;
+            width: 100%;
+            display: none;
+            top: 0;
+            padding: 0;
+
+            &.active {
+                display: flex;
+                position: absolute;
+                top: 51px;
+                background-color: var(--vinotinto-opaco);
+
+                & ul {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    & li {
+                        padding: 0px !important; 
+                        color: var(--blanco);
+                        display: flex;
+                        padding: 20px 0;
+                        width: 100%;
+
+                        & a {
+                            width: 100%;
+                            padding: 20px;
+
+                            &:hover {
+                                border-radius: 0;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.seccion-sobre-mi {
+        & div.info-sobre-mi {
+            &>img {
+                width: 300px;
+            }
+
+            & div.imagenes-representativas {
+                & img:nth-child(1) {
+                    width: 350px;
+                }
+            }
+        }
+
+        & div.contenido-informacion {
+            & div.contenido-programas {
+                & h1 {
+                    font-size: 2.5rem;
+                }
+
+                & div.programa {
+                    & img.logo-programa {
+                        width: 60px;
+                    }
+
+                    & img.estrellas {
+                        width: 30px;
+                    }
+                }
+            }
+
+            & div.texto-sobre-mi {
+                & div.contenido-habilidades-educacion {
+
+                    & div.habilidades,
+                    div.educacion {
+                        & h2 {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    section.seccion-proyectos {
+        & div.tipos-proyectos {
+            width: 50%;
+            margin: 2.5rem auto;
+
+            & ul {
+
+                & li {
+
+                    font-size: 1rem;
+                    width: 375px;
+                    padding-left: 35px;
+                    margin-left: 0px;
+
+                    & h3 {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                & li::before {
+                    content: "";
+                    background-image: url("../public/imagenes/estrella-rellena.png");
+                    background-size: 30px;
+                    background-repeat: no-repeat;
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    left: 0;
+                    top: 25px;
+                    transform: translateY(-90%);
+                }
+            }
+        }
+
+        & section.seccion-ilustraciones {
+            &>img {
+                width: 100%;
+            }
+
+            & div.contenido-ilustraciones {
+                & div:nth-child(1) {
+                    & img {
+                        max-width: 350px;
+                    }
+
+                }
+
+                & div:nth-child(2) {
+                    & img {
+                        max-width: 350px;
+                    }
+
+                }
+            }
+        }
+
+        & section.seccion-disenos {
+            &>img {
+                width: 90%;
+            }
+
+            & div.contenido-disenos {
+                & img:nth-child(odd) {
+                    height: 400px;
+                }
+
+                & img:nth-child(even) {
+                    width: 300px;
+                }
+            }
+        }
+
+        & section.seccion-fotografias {
+            &>img {
+                width: 90%;
+            }
+
+            & div.contenido-fotografias {
+                &>img {
+                    width: 350px;
+                    height: 550px;
+                }
+
+                & div.fotos-dobles {
+                    & img {
+                        width: 160px;
+                    }
+                }
+            }
+        }
+
+
+        & section.seccion-branding {
+
+
+            & div.contenido-branding {
+                gap: 1.5rem;
+                grid-template-areas:
+                    "titulo"
+                    "mugs  "
+                    "llavero"
+                    "muneco"
+                    "camisa"
+                    "estampa"
+                    "gorra";
+
+                align-items: center;
+
+                & img.titulo {
+                    width: 90%;
+                }
+
+                & img.branding {
+                    width: 200px;
+                }
+            }
+        }
+    }
+
+
+    section.seccion-contacto {
+        & div.cabecera-contacto {
+            &>img {
+                display: none;
+            }
+
+            &>h1 {
+                font-size: 4rem;
+            }
+        }
+
+        & div.contenido-contacto {
+            & a {
+                & img {
+                    width: 2rem;
+                }
+
+                & span {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

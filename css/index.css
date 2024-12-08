@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+:root {
+    --fondo: #803435;
+    --vinotinto-hover: #531110;
+    --vinotinto-focus: #340B0A;
+    --blanco: #FFFFFF;
+    --vinotinto-opaco: #5311109c;
+    --vinotinto-claro: #F1C4C4;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fondo);
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+section.seccion-hero {
+    height: 100vh;
+    background: url("../public/imagenes/hero.png") no-repeat center center;
+    background-size: cover;
+}
+
+header {
+    z-index: 1;
+    width: 100%;
+    /* display: flex; */
+
+    & a img {
+        display: none;
+    }
+
+    & div.boton-burguer {
+        display: none;
+    }
+
+    &>nav {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 20px 30px;
+
+        &>ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            &>li {
+                margin-right: 30px;
+                font-size: 1rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 0.1rem;
+
+                &>a {
+                    text-decoration: none;
+                    color: white;
+                    transition: all 0.3s ease;
+                    padding: 10px 20px;
+                    border-radius: 30px;
+
+                    &:hover {
+                        background-color: var(--vinotinto-hover);
+                        color: var(--fondo);
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.seccion-sobre-mi {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & div.info-sobre-mi {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        &>img {
+            width: 400px;
+        }
+
+        & div.imagenes-representativas {
+            & img:nth-child(1) {
+                width: 700px;
+            }
+
+            & img:nth-child(2) {
+                width: 250px;
+            }
+        }
+    }
+
+
+    & div.contenido-informacion {
+        margin-top: 1rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap-reverse;
+        /* justify-content: center; */
+
+        & div.contenido-programas {
+            display: flex;
+            flex-direction: column;
+
+            gap: 1rem;
+
+            & h1 {
+                text-transform: uppercase;
+                color: white;
+            }
+
+            & div.programa {
+                display: flex;
+                align-items: center;
+
+                & img.logo-programa {
+                    width: 70px;
+                    margin-right: 1rem;
+                }
+
+                & img.estrellas {
+                    width: 50px;
+                }
+            }
+        }
+
+        & div.texto-sobre-mi {
+            max-width: 900px;
+            color: var(--blanco);
+
+            &>p {
+                font-size: 1.5rem;
+                /* font-weight: 300; */
+            }
+
+            & div.contenido-habilidades-educacion {
+                margin-top: 1rem;
+                display: flex;
+                /* justify-content: space-around; */
+                gap: 5rem;
+
+                & div.habilidades,
+                div.educacion {
+                    & ul li {
+                        list-style: inside;
+                        list-style-type: georgian;
+                        font-size: 1.5rem;
+                        color: var(--blanco);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+section.seccion-proyectos {
+    & div.separador-proyectos {
+        background-color: var(--blanco);
+        background-image: url("../public/imagenes/proyectos.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: calc(100vh / 3);
+    }
+
+    & div.segundo-separador-proyectos {
+        background-image: url("../public/imagenes/division-monitos.png");
+        background-position: center;
+        background-size: cover;
+        height: 150px;
+    }
+
+    & div.tipos-proyectos {
+        width: 60%;
+        margin: 2.5rem auto;
+
+
+        & ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+            text-transform: uppercase;
+            flex-wrap: wrap;
+            gap: 1rem;
+            text-decoration: none;
+
+            li {
+                width: 500px;
+                list-style: none;
+                position: relative;
+                padding-left: 35px;
+                margin-left: 40px;
+
+                & a {
+                    color: var(--blanco);
+                    text-decoration: none;
+                }
+            }
+
+            li::before {
+                content: "";
+                background-image: url("../public/imagenes/estrella-rellena.png");
+                background-size: 30px;
+                background-repeat: no-repeat;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                left: 0;
+                top: 25px;
+                transform: translateY(-50%);
+            }
+
+        }
+    }
+
+    & section.seccion-ilustraciones {
+        &>img {
+            width: 100%;
+        }
+
+        & div.contenido-ilustraciones {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            & div:nth-child(1) {
+                display: flex;
+                justify-content: center;
+                flex: 1;
+
+                & img {
+                    max-width: 800px;
+                }
+
+            }
+
+            & div:nth-child(2) {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                & img {
+                    max-width: 600px;
+                }
+
+            }
+        }
+
+
+    }
+
+    & section.seccion-disenos {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+
+        &>img {
+            width: 60%;
+        }
+
+        & div.contenido-disenos {
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            /* max-height: 700px; */
+
+            & img:nth-child(odd) {
+                height: 500px;
+            }
+
+            & img:nth-child(even) {
+                width: 400px;
+            }
+        }
+    }
+
+    & section.seccion-fotografias {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        margin-top: 2remg;
+
+        &>img {
+            width: 60%;
+        }
+
+        & div.contenido-fotografias {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            &>img {
+                width: 500px;
+                height: 661px;
+            }
+
+            & div.fotos-dobles {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+
+
+                & img {
+                    width: 243px;
+                }
+            }
+        }
+    }
+
+
+    & section.seccion-branding {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        margin-top: 2rem;
+
+        &>img {
+            width: 60%;
+        }
+
+        & div.contenido-branding {
+            max-width: 1000px;
+            display: grid;
+            place-items: center;
+            /* ALINEACION DE BRANDING IMAGENES */
+            grid-template-areas:
+                "titulo titulo  muneco"
+                "mugs   llavero muneco"
+                "camisa estampa gorra";
+
+            align-items: center;
+
+            & img.titulo {
+                width: 100%;
+            }
+
+            & img.branding {
+                width: 320px;
+            }
+        }
+    }
+}
+
+img.mugs {
+    grid-area: mugs;
+}
+
+img.llavero {
+    grid-area: llavero;
+}
+
+img.muneco {
+    grid-area: muneco;
+}
+
+img.camisa {
+    grid-area: camisa;
+}
+
+img.estampa {
+    grid-area: estampa;
+}
+
+img.gorra {
+    grid-area: gorra;
+}
+
+img.titulo {
+    grid-area: titulo;
+}
+
+section.seccion-contacto {
+    & div.cabecera-contacto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+
+        &>img {
+            width: 8%;
+        }
+
+        &>h1 {
+            font-size: 5rem;
+            text-align: center;
+            text-transform: uppercase;
+            color: var(--blanco);
+        }
+    }
+
+    & div.contenido-contacto {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        gap: 1rem;
+        margin: 2rem auto;
+
+
+        & a {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: var(--blanco);
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: var(--vinotinto-hover);
+            }
+
+            & img {
+                width: 3rem;
+            }
+
+            & span {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
